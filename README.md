@@ -19,6 +19,17 @@ in the elodie repository (`elodie/tests/files`).
 | `raw-leica-m9.dng` | Leica M9 | 34.7 MB | yes | DNG |
 | `raw-nikon-d3.nef` | Nikon D3 | 8.5 MB | yes | Nikon NEF |
 | `raw-panasonic-dmc-lx7.rw2` | Panasonic DMC-LX7 | 3.1 MB | no | Panasonic RW2 |
+| `raw-canon-eos-r6.cr3` | Canon EOS R6 | 5.0 MB | – | CR3 (v2) |
+| `raw-nikon-coolpix-p1000.nrw` | Nikon COOLPIX P1000 | 25.2 MB | – | NRW (v2) |
+| `raw-fujifilm-x-s10.raf` | Fujifilm X-S10 | 17.8 MB | – | RAF (v2) |
+| `raw-olympus-e-m1markii.orf` | Olympus E-M1MarkII | 16.5 MB | – | ORF (v2) |
+| `raw-pentax-k10d.pef` | Pentax K10D | 9.1 MB | – | PEF (v2) |
+| `raw-samsung-nx500.srw` | Samsung NX500 | 19.8 MB | – | SRW (v2) |
+| `raw-panasonic-dmc-fz8.raw` | Panasonic DMC-FZ8 | 11.1 MB | – | RAW (v2) |
+| `raw-phase-one-p40plus.iiq` | Phase One P40+ | 10.7 MB | – | IIQ (v2) |
+| `raw-sigma-dp1.x3f` | Sigma DP1 | 9.8 MB | – | X3F (v2) |
+| `raw-epson-r-d1.erf` | Epson R-D1 | 9.5 MB | – | ERF (v2) |
+| `raw-minolta-dimage-5.mrw` | Minolta DiMAGE 5 | 6.1 MB | – | MRW (v2) |
 
 [`manifest.json`](manifest.json) lists each file with its sha256, size, capture
 date (`date_time_original`), MIME type as reported by ExifTool, license and source.
