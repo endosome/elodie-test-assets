@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
-# Download the test assets of elodie into dist/ and verify their checksums.
+# Collect the test assets of elodie into build/ and verify their checksums.
 #
-# All files are camera raw samples from https://raw.pixls.us/ released under
-# CC0 1.0 (public domain). Keep this list in sync with manifest.json.
+# Files are either downloaded from their source (i.e. camera raw samples from
+# https://raw.pixls.us/) or stored in this repository under files/ (i.e.
+# samples contributed to this repository which have no other source). All are
+# released under CC0 1.0 (public domain). Keep this list in sync with
+# manifest.json.
 #
-# Usage: scripts/download.sh [output directory, default: dist]
+# Usage: scripts/download.sh [output directory, default: build]
 
 set -euo pipefail
 
 OUTPUT_DIR="${1:-build}"
+REPOSITORY_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-# name|sha256|source url
+# name|sha256|source: a URL, or a path in this repository (files/<name>)
 ASSETS=(
   # gh-507: raw files which Pillow cannot read
   "raw-nikon-z-f.nef|98d6ca8e6c98048ca7ffed68ccaeda7b2b9f03807f0d320d97d5678db21748c2|https://raw.pixls.us/getfile.php/6887/nice/Nikon%20-%20Z%20f%20-%208bit%208bit%20lossy%20compressed%20(3:2).NEF"
@@ -43,12 +47,20 @@ for asset in "${ASSETS[@]}"; do
   path="$OUTPUT_DIR/$name"
 
   if [ -f "$path" ] && echo "$sha256  $path" | sha256sum --check --status; then
-    echo "ok        $name (already downloaded)"
+    echo "ok        $name (already in place)"
     continue
   fi
 
+  if [[ "$url" == files/* ]]; then
+    # Stored in this repository
+    if ! cp "$REPOSITORY_DIR/$url" "$path.part" 2>/dev/null; then
+      echo "FAILED    $name: $url not found" >&2
+      rm -f "$path.part"
+      failed=1
+      continue
+    fi
   # Download to a temporary file so an interrupted download is never kept
-  if ! curl --fail --silent --show-error --location --retry 3 --output "$path.part" "$url"; then
+  elif ! curl --fail --silent --show-error --location --retry 3 --output "$path.part" "$url"; then
     echo "FAILED    $name: download error" >&2
     rm -f "$path.part"
     failed=1

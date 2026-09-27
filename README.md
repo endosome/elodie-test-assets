@@ -8,6 +8,16 @@ repository and downloaded by the tests when needed.
 Small files which the tests can generate or which are only a few kilobytes stay
 in the elodie repository (`elodie/tests/files`).
 
+## Where the files come from
+
+- **Downloaded:** files available elsewhere (i.e. the camera raw samples from
+  raw.pixls.us) are downloaded from their source when a release is prepared.
+- **Stored in this repository:** files without another source (i.e. photos
+  contributed to this repository) are committed to [`files/`](files). Keep them
+  small, GitHub rejects files larger than 100 MB.
+
+Both kinds end up in the releases, which is where the tests get them from.
+
 ## Files
 
 | File | Camera | Size | Pillow can read it | Used for |
@@ -36,10 +46,13 @@ date (`date_time_original`), MIME type as reported by ExifTool, license and sour
 
 ## License
 
-Only files which may be redistributed freely are accepted. All current files are
-from [raw.pixls.us](https://raw.pixls.us/) and are released under
-[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain),
-as is the rest of this repository (see [LICENSE](LICENSE)).
+Only files which may be redistributed freely are accepted. All files are released
+under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public
+domain), as is the rest of this repository (see [LICENSE](LICENSE)). The files
+from [raw.pixls.us](https://raw.pixls.us/) are CC0 there, files contributed to
+`files/` are released under CC0 by their author. Check contributed photos for
+personal information in their metadata (i.e. GPS, serial numbers, owner names)
+before adding them.
 
 ## Using the files
 
@@ -57,8 +70,10 @@ Releases are never changed once published so that tests which pin a version
 keep working. To add or replace files, publish a new version with all files.
 
 1. Add the file to `scripts/download.sh` and to `manifest.json` (keep both in sync)
-   and bump `version` in `manifest.json`.
-2. Download and verify all files into `build/`:
+   and bump `version` in `manifest.json`. For a downloaded file, its source is
+   the URL. For a file stored in this repository, commit it to `files/` and use
+   `files/<name>` as its source.
+2. Download, copy and verify all files into `build/`:
 
    ```
    scripts/download.sh
