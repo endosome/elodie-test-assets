@@ -40,6 +40,16 @@ Both kinds end up in the releases, which is where the tests get them from.
 | `raw-sigma-dp1.x3f` | Sigma DP1 | 9.8 MB | – | X3F (v2) |
 | `raw-epson-r-d1.erf` | Epson R-D1 | 9.5 MB | – | ERF (v2) |
 | `raw-minolta-dimage-5.mrw` | Minolta DiMAGE 5 | 6.1 MB | – | MRW (v2) |
+| `live-photo-apple-iphone-15.heic` | Apple iPhone 15 | 4.9 MB | – | gh-474: Apple Live Photo, the photo (HEIC with an HDR gain map) (v3) |
+| `live-photo-apple-iphone-15.mov` | Apple iPhone 15 | 3.7 MB | – | gh-474: Apple Live Photo, the video of live-photo-apple-iphone-15.heic (v3) |
+| `motion-photo-google-pixel-9-pro-xl-ultra-hdr.jpg` | Google Pixel 9 Pro XL | 4.6 MB | – | Google Motion Photo with an Ultra HDR gain map (v3) |
+| `motion-photo-samsung-galaxy-a34-mpv2.jpg` | Samsung Galaxy A34 5G | 7.3 MB | – | Samsung Motion Photo, JPEG, Google header and Samsung trailer v2 (v3) |
+| `motion-photo-samsung-galaxy-s20-versionless.heic` | Samsung SM-G981U1 | 5.5 MB | – | Samsung Motion Photo, HEIC, only a Samsung trailer without version (v3) |
+| `motion-photo-samsung-galaxy-s20fe-mpv2.heif` | Samsung SM-G781B | 3.2 MB | – | Samsung Motion Photo, HEIF, Google header and Samsung trailer v2 (v3) |
+| `motion-photo-samsung-galaxy-s20fe-mpv2.jpg` | Samsung SM-G780F | 5.2 MB | – | Samsung Motion Photo, JPEG, Google header and Samsung trailer v2 (v3) |
+| `motion-photo-samsung-galaxy-s23-ultra-mpv3.heic` | Samsung Galaxy S23 Ultra | 5.1 MB | – | Samsung Motion Photo, HEIC, Google header and Samsung trailer v3 (v3) |
+| `motion-photo-samsung-galaxy-tab-s9-mpv3.heic` | Samsung Galaxy Tab S9 5G | 7.1 MB | – | Samsung Motion Photo, HEIC, Google header and Samsung trailer v3 (v3) |
+| `motion-photo-samsung-galaxy-tab-s9-mpv3.jpg` | Samsung Galaxy Tab S9 5G | 7.3 MB | – | Samsung Motion Photo, JPEG, Google header and Samsung trailer v3 (v3) |
 
 [`manifest.json`](manifest.json) lists each file with its sha256, size, capture
 date (`date_time_original`), MIME type as reported by ExifTool, license and source.

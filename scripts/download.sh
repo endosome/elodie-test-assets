@@ -37,6 +37,17 @@ ASSETS=(
   "raw-sigma-dp1.x3f|44508f7df4191aacaecb6461e1841dae002e5b71a4f95a00aa3f52d1c6d6bc5f|https://raw.pixls.us/getfile.php/1116/nice/Sigma%20-%20DP1%20-%203:2.X3F"
   "raw-epson-r-d1.erf|09d8e533d93116294a9f3e161ed868e929454c7b946e083b644bd6bb75bcb5e4|https://raw.pixls.us/getfile.php/2680/nice/Epson%20-%20R-D1%20-%2012bit%20(3:2).ERF"
   "raw-minolta-dimage-5.mrw|d60bfd80bcb1f7b9c88b14a5e46ea27885bbf92d990ab30b3939288678fea0d9|https://raw.pixls.us/getfile.php/7795/nice/Minolta%20-%20DiMAGE%205%20-%204:3.MRW"
+  # v3: Apple Live Photo, Google and Samsung Motion Photos, stored in this repository
+  "live-photo-apple-iphone-15.heic|7db0c63e7e04fcff26b9af6a4f039f8a35cb58fe288d99b147448e5862c06e73|files/live-photo-apple-iphone-15.heic"
+  "live-photo-apple-iphone-15.mov|7602b94a3de6f0aa1723c940145c57a426616aae3afcea4df4cccb025375df9e|files/live-photo-apple-iphone-15.mov"
+  "motion-photo-google-pixel-9-pro-xl-ultra-hdr.jpg|ac0d8ac4560aa2137316678058c6723aa8a72d009475f0aa1fff87cb7dd8a4e7|files/motion-photo-google-pixel-9-pro-xl-ultra-hdr.jpg"
+  "motion-photo-samsung-galaxy-a34-mpv2.jpg|8b4de80def81867630fe0f28c3051053ff0b76b7249f91b9d515a2e67ba04a8a|files/motion-photo-samsung-galaxy-a34-mpv2.jpg"
+  "motion-photo-samsung-galaxy-s20-versionless.heic|f2dbe60e0402479f3c0d4246f30756fc73a416cdd9c64509c9767b070e22660e|files/motion-photo-samsung-galaxy-s20-versionless.heic"
+  "motion-photo-samsung-galaxy-s20fe-mpv2.heif|3b9da515a1ddf66910397c7f9165e254b8022fc82b0d0436bfc91952c26e7baf|files/motion-photo-samsung-galaxy-s20fe-mpv2.heif"
+  "motion-photo-samsung-galaxy-s20fe-mpv2.jpg|8676244eb21226043f4af46336e028e537a4f64895600c178efc5592dd2b547e|files/motion-photo-samsung-galaxy-s20fe-mpv2.jpg"
+  "motion-photo-samsung-galaxy-s23-ultra-mpv3.heic|0f6afcca1755df94834b9ec93b0622b2eb027d17b1a981b232603a63b4ffb2cb|files/motion-photo-samsung-galaxy-s23-ultra-mpv3.heic"
+  "motion-photo-samsung-galaxy-tab-s9-mpv3.heic|23e9f77624a870e2f70c31b68b6986893345fd805eb319bfe26114fbe4e461b3|files/motion-photo-samsung-galaxy-tab-s9-mpv3.heic"
+  "motion-photo-samsung-galaxy-tab-s9-mpv3.jpg|3304d46313fbb39ab002ac04882e1198b5f148f5028abf58e938d5c0b5413cb1|files/motion-photo-samsung-galaxy-tab-s9-mpv3.jpg"
 )
 
 mkdir -p "$OUTPUT_DIR"
